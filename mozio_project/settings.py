@@ -79,20 +79,7 @@ WSGI_APPLICATION = 'mozio_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        # "NAME": "",
-        # "USER": "mozio",
-        # "PASSWORD": "password",
-        # "HOST": "localhost",
-        # "PORT": "",
-    }
-}
-
-
-DATABASES['default'] = dj_database_url.parse(os.environ.get("DB"), conn_max_age=600)
-
+DATABASES = {'default': dj_database_url.parse(os.environ.get("DB"), conn_max_age=600)}
 
 
 # Password validation
