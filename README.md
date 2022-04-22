@@ -1,4 +1,4 @@
-# Simple Rest API to Create, Delete, Read and Delete Providers and its Polygons
+# Simple Rest API to Create, Delete, Read and Update Providers and its Polygons
 
 #Instalation
 python3 -m venv env
