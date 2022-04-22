@@ -9,7 +9,7 @@ from django.views.decorators.cache import cache_page
 
 class ProviderViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows Provider to be viewed or edited.
     """
     queryset = Provider.objects.all()
     serializer_class = ProviderSerializer
@@ -18,7 +18,7 @@ class ProviderViewSet(viewsets.ModelViewSet):
 
 class PolygonViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that allows Polygon to be viewed or edited.
     """
     queryset = Polygon.objects.all()
     serializer_class = PolygonSerializer
@@ -29,6 +29,7 @@ class PolygonViewSet(viewsets.ModelViewSet):
             serializer_class=CustomPolygonSerializer)
     def given_coordinates_return_polygons(self, request):
         """
+            API endpoint that allows Polygons to be retrieved given some coordinates.
             url ex. /polygons/given_coordinates_return_polygons/?lat=125.6&lng=10.1
             where lat means latitude and lng longitude
         """
