@@ -1,0 +1,1 @@
+web: gunicorn mozio_project.wsgi
